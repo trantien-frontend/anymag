@@ -1,0 +1,17 @@
+.blur-effect {
+    &:hover{
+        opacity: .7;
+    }
+}
+.text-siver {
+    &:hover{
+        color: var(--siver);
+    }
+}
+.underline-effect {
+    transition: .5s all;
+    background: linear-gradient(to bottom,transparent 62%,#ff027f 0) left bottom/0 20% no-repeat;
+    &:hover{
+        background-size: 100% 20%;
+    }
+}
