@@ -1,0 +1,17 @@
+mixin poster(page) 
+    //- start-poster
+    .poster 
+        img(class="poster__background" src="./images/Home-image-main.jpg", alt="")
+        .poster__overlay
+        .poster__title 
+            //- item-left 
+            .title-left
+                -let left = 1;
+                    while left <= 3 
+                        .title-left__item
+                            img( class="blur-effect" src=`./images/banner-left-${left++}.png`, alt="")
+            //- item-right
+            .title-right    
+                h4 10 Stereoty pes That Aren’t ALWAYS TRUE
+                h4 what is host this season
+    //- end-poster

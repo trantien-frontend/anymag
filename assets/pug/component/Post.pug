@@ -1,0 +1,15 @@
+mixin post(listPost)
+    .post
+        .title-parten
+            h4 on the post
+        .post-container 
+            .row 
+                -const colPost = ['col-lg-4','col-md-4','col-sm-6','col-6'];
+                each post in listPost 
+                    div(class=colPost)
+                        .post__card
+                            .post__card-img    
+                                img( class="lazy-img" src=".lazy.jpg" alt="waiting" data-src=post.img)
+                            .post__card-text    
+                                a(href="#" class="test-siver")= post.title  
+                                p.update-year

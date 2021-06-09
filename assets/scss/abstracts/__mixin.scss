@@ -1,0 +1,34 @@
+// reponsive
+@mixin reponsive($breakpoint) {
+    @if ($breakpoint == desktop) {
+      @media only screen and (min-width: 1200px) {
+        @content;
+      }
+    }
+    @if ($breakpoint == laptop) {
+      @media only screen and (min-width: 992px) {
+        @content;
+      }
+    }
+    @if ($breakpoint == tablet) {
+      @media only screen and (min-width: 768px) {
+        @content;
+      }
+    }
+    @if ($breakpoint == phoneMore) {
+      @media only screen and (min-width: 576px) {
+        @content;
+      }
+    }
+    @if ($breakpoint == phone) {
+      @media only screen and (max-width: 576px) {
+        @content;
+      }
+    }
+  }
+//flex-box
+@mixin flexbox($x,$y,$z) {
+  display: $x;
+  align-items: $y;
+  justify-content: $z;
+} 

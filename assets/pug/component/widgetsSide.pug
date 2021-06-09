@@ -1,0 +1,44 @@
+.widgets-side
+    .widgets-side__button
+    .widgets-side__pages   
+        -let sidePageImg = [{img:'./images/lifestyle-page.jpg',title:'lifestyle'},{img:'./images/travel-page.jpg',title:'travel'},{img:'./images/food-page.jpg',title:'food'},{img:'./images/fashion-page.jpg',title:'fashion'}]
+        each item in sidePageImg 
+            .widgets-side__page
+                .side__pages-img
+                    img(src= item.img alt="loading...")
+                    a(href="#") item.title
+    .widgets-side__advertisment
+        .title-parten
+            h4 advertisment
+        .side__advertisment-img
+            img(src="./images/ADVERTISMENT.jpg" alt="")
+    .widgets-side__instagram
+        .title-parten
+            h4 instagram
+        .side__instagram-imgs
+            .side__instagram-img
+                img(src="./images/instagram-1.jpg" alt="")
+            .side__instagram-img
+                img(src="./images/instagram-2.jpg" alt="")
+            .side__instagram-img
+                img(src="./images/instagram-3.jpg" alt="")
+            .side__instagram-img
+                img(src="./images/instagram-4.jpg" alt="")
+            .side__instagram-img
+                img(src="./images/instagram-5.jpg" alt="")
+            .side__instagram-img
+                img(src="./images/instagram-6.jpg" alt="")
+            .side__instagram-img
+                img(src="./images/instagram-7.jpg" alt="")
+            .side__instagram-img
+                img(src="./images/instagram-8.jpg" alt="")
+            .side__instagram-img
+                img(src="./images/instagram-9.jpg" alt="")
+    .widgets-side__newsletter
+        .title-parten
+            h4 newsletter
+        .side__newsletter-content 
+            p sign up to get out latest news!
+            label(for="email" class="form-title") Email Adress
+            input(type="text" class="form-control" id="email" placeholder="Your email address")
+            button SIGN UP 

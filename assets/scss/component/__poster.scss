@@ -1,0 +1,86 @@
+.poster {
+  position: absolute;
+  z-index: 1;
+
+  width: 100%;
+  height: 100%;
+
+  &__background {
+    position: absolute !important;
+    z-index: -1 !important;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover !important;
+  }
+  &__overlay {
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+
+    width: 100%;
+    height: 100%;
+
+    opacity: 0.3;
+    background: black;
+  }
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 2;
+
+    width: 20%;
+    height: 100%;
+
+    background: url("../images/fold-shadow-left.png");
+  }
+  &__title {
+    position: absolute;
+    bottom: 5%;
+    left: 0;
+    z-index: 2;
+
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: flex-end;
+
+    padding: 0 1.5rem;
+    .title-left {
+      flex-basis: 50%;
+      &__item {
+        max-width: 60%;
+        @for $i from 1 to 3 {
+          &:nth-child(#{$i}) {
+            padding-bottom: 2rem;
+          }
+        }
+      }
+    }
+    .title-right {
+      flex-basis: 50%;
+      h4 {
+        font-size: 4.4rem;
+        font-weight: 600;
+        font-family: $ff2;
+        line-height: 5rem;
+
+        text-align: right;
+
+        color: white;
+        &:first-child {
+          padding-bottom: 2rem;
+          padding-left: 3rem;
+        }
+        &:last-child {
+          text-transform: uppercase;
+          font-weight: 400;
+        }
+      }
+    }
+  }
+}

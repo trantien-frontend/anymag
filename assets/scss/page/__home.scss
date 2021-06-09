@@ -1,0 +1,108 @@
+// posst
+.post {
+  padding-top: 4rem;
+  padding-bottom: 2rem;
+  &-container {
+    padding-top: 4rem;
+  }
+  &__card {
+    height: 100%;
+    &-img {
+      height: 200px;
+      overflow: hidden;
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+    &-text {
+      a {
+        display: block;
+        font-size: $fs1-1;
+        font-family: $ff2;
+        font-weight: $fw4;
+        color: var(--black-color);
+        padding: 10px 0;
+      }
+    }
+    @include reponsive(laptop) {
+      &--last {
+        display: none;
+      }
+    }
+    @include reponsive(tablet) {
+      &--last {
+        display: none;
+      }
+    }
+  }
+}
+// end-posst
+// travel
+.travel {
+  &-container {
+    padding: 2rem 0;
+  }
+  .col-lg-6 , .col-md-6, .col-sm-6 {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  &-left {
+    height: 400px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 15px;
+    &__img {
+      width: 100%;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    @include reponsive (laptop) {
+        margin-bottom: 0;
+    }
+  }
+  &-right {
+    height: calc(400px / 3);
+    padding-bottom: 15px;
+    padding-left: 15px;
+    overflow: hidden;
+    width: 100%;
+    @include flexbox(flex, center, center);
+    &__img {
+      max-width: 30%;
+      height: 100%;
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    &__text {
+      padding-left: 15px;
+      max-width: 70%;
+      a {
+        font-size: $fs1-1;
+        font-weight: $fw4;
+        line-height: $fs1-1 + 0.5rem;
+        font-family: $ff2;
+        color: var(--black-color);
+      }
+    }
+    &:last-child {
+      padding-bottom: 0;
+    }
+  }
+}
+// end-travel
+// lastest
+.lastest {
+  &-container {
+    padding-top: 2rem;
+  }
+}
+// lastest end s

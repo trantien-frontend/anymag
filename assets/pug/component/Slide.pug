@@ -1,0 +1,26 @@
+.slide
+    .slide__group 
+        -let items = [{img:'1' , style: 'Fashion'},{img:'2' , style: 'Travel'},{img:'3' , style: 'LifeStyle'},{img:'4' , style: 'Design'}]
+            each item in items
+                if item.img === '1'
+                    div(class='slide__item slide__item--active')     
+                        img(src=`./images/slide-${item.img}.jpg`, alt="")
+                        .slide__item-dsc
+                            .block
+                                h4.block-inner= item.style    
+                            .dsc 
+                                h3 How To Learn About Style on Only 10 Days
+                                p.update-year 
+                else 
+                    .slide__item     
+                        img(src=`./images/slide-${item.img}.jpg`, alt="")
+                        .slide__item-dsc
+                            .block
+                                h4.block-inner= item.style    
+                            .dsc 
+                                h3 How To Learn About Style on Only 10 Days
+                                p.update-year 
+
+    .slide__button
+        .button-prev 
+        .button-next 

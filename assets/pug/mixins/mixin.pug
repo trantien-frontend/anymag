@@ -1,0 +1,48 @@
+mixin menu 
+    ul.nav-menu
+       li.nav-menu__item
+        a(href="#" class="nav-menu__link") post
+        // Sub-menu
+        ul.sub-menu
+            li.sub-menu__list
+                a.sub-menu__link standart post
+            li.sub-menu__list
+                a.sub-menu__link music post
+            li.sub-menu__list
+                a.sub-menu__link video post
+        // End-Sub-menu
+       li.nav-menu__item 
+        a(href="#" class="nav-menu__link") lifestyle
+       li.nav-menu__item 
+        a(href="#" class="nav-menu__link") travel
+       li.nav-menu__item 
+        a(href="#" class="nav-menu__link") fashion
+       li.nav-menu__item 
+        a(href="#" class="nav-menu__link") about me
+       li.nav-menu__item 
+        a(href="#" class="nav-menu__link") shop
+       li.nav-menu__item 
+        a(href="#" class="nav-menu__link") contact me   
+       li.nav-menu__item 
+        a(href="#" class="search") 
+            span(class="fas fa-search")   search
+mixin icon
+    ul.icon-list
+        li.icon-list__item 
+            a.icon-list__link 
+                span(class="fab fa-facebook-f")
+        li.icon-list__item 
+            a.icon-list__link 
+                span(class="fab fa-twitter")
+        li.icon-list__item 
+            a.icon-list__link 
+                span(class="fab fa-instagram")
+        li.icon-list__item 
+            a.icon-list__link 
+                span(class="fab fa-vimeo-v")
+        li.icon-list__item 
+            a.icon-list__link 
+                span(class="fas fa-shopping-cart" data-cart="0")
+        li.icon-list__item 
+            a(class="button-widgets icon-list__link ")
+                span(class="fas fa-plus")

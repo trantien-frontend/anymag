@@ -1,0 +1,14 @@
+mixin StyleCss(page)
+        //build:css css/styles.min.css 
+        link(rel="stylesheet" href="./css/style.css")
+        link(rel="stylesheet" href="./css/grid.css")
+        //endbuild
+mixin Path(page)
+        link(rel="stylesheet", href=href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css")
+        link(rel="preconnect" href="https://fonts.gstatic.com")
+        link(rel="icon" href="./images/theme-logo.png" type="image/gif" sizes="16x16")
+        link(href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet")  
+mixin Script(page)
+        //build:js js/main.min.js
+        script(src="./js/main.js")
+        //endbuild

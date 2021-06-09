@@ -1,0 +1,35 @@
+include ./mixins/Path.pug
+
+include ./component/Poster.pug
+include ./component/Lastest.pug
+include ./component/Pagination.pug
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        title TranTien
+        +StyleCss()
+        +Path()
+    body 
+        .wrapper 
+            .main
+                .row 
+                    -const col = ['col-lg-6','col-md-12','col-12']
+                    div(class=col)
+                        .main-poster
+                            include ./layout/head.pug
+                            //- Start-poster
+                            +poster()
+                            //- End-poster
+                    div(class=col)
+                        //- start-main-content
+                        .main-content
+                            include ./component/ListIcon.pug
+                            -let listLastest = [{img:'./images/lastest-page-2-1.jpg'},{img:'./images/lastest-page-2-2.jpg'},{img:'./images/lastest-page-2-3.jpg'},{img:'./images/lastest-page-2-4.jpg'},{img:'./images/lastest-page-2-5.jpg'},{img:'./images/lastest-page-2-6.jpg'},{img:'./images/lastest-page-2-7.jpg'},{img:'./images/lastest-page-2-8.jpg'},{img:'./images/lastest-page-2-9.jpg'},{img:'./images/lastest-page-2-10.jpg'}]
+                            +lastestPost(listLastest)
+                            +pagination('Home-2.html')
+                            include ./layout/footer.pug
+                include ./component/widgetsSide.pug
+        +Script()

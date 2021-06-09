@@ -1,0 +1,165 @@
+.slide-home {
+  background-color: transparent;
+  height: 500px;
+  width: 100%;
+  position: relative;
+  // overflow: hidden;
+  &__block {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 0;
+  }
+  &__item {
+    position: absolute;
+    z-index: 3;
+    height: 100%;
+    width: 100%;
+    display: none;
+    flex-basis: 100%;
+    flex-grow: 0;
+    flex-shrink: 0;
+    transition: 0.5s;
+    .item-inner {
+      position: absolute;
+      z-index: 99;
+      padding-left: 3rem;
+      padding-bottom: 3rem;
+      left: 0;
+      bottom: 0;
+      @include reponsive(laptop) {
+        max-width: 80%;
+      }
+      &__text {
+        h2 {
+          font-family: $ff2;
+          font-weight: $fw4;
+          font-size: $fs4;
+          color: var(--white-color);
+          @include reponsive(laptop) {
+            font-size: $fs4 + 1.1;
+            line-height: $fs4 + 1.1;
+          }
+        }
+        p {
+          font-weight: $fw3;
+          padding-top: 10px;
+          color: var(--white-color);
+        }
+      }
+    }
+    .item-ovl {
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background: var(--black-color);
+      opacity: 0.3;
+    }
+  }
+  &__button {
+    position: absolute;
+    top: 5%;
+    right: 5%;
+    z-index: 2;
+    @include flexbox(flex, center, center);
+  }
+  .slide--active {
+    display: block;
+    animation-name: fade;
+    animation-duration: 0.5s;
+    animation-timing-function: ease;
+  }
+}
+.slide {
+  position: relative;
+
+  overflow: hidden;
+
+  height: 85vh;
+  width: 100%;
+  background: transparent;
+
+  &__item {
+    position: absolute;
+    left: 0;
+    top: 0;
+
+    display: none;
+
+    width: 100%;
+    height: 100%;
+
+    img {
+      position: absolute;
+      z-index: -1;
+      left: 0;
+      top: 0;
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+    &-dsc {
+      position: absolute;
+      z-index: 99;
+      bottom: 15px;
+      left: 15px;
+
+      width: 100%;
+      .dsc {
+        @include reponsive(laptop) {
+          max-width: 80%;
+        }
+        h3 {
+          font-family: $ff2;
+          font-weight: $fw4;
+          font-size: $fs4;
+          color: var(--white-color);
+          @include reponsive(laptop) {
+            font-size: $fs4 + 1.1;
+            line-height: $fs4 + 1.1;
+          }
+        }
+
+        p {
+          font-weight: $fw3;
+          padding-top: 10px;
+          color: var(--white-color);
+        }
+      }
+    }
+    &::before {
+      content: "";
+
+      position: absolute;
+      z-index: 1;
+      left: 0;
+      top: 0;
+
+      width: 100%;
+      height: 100%;
+
+      background: black;
+
+      opacity: 0.3;
+    }
+    &--active {
+      display: block;
+      animation: fade 0.5s;
+    }
+  }
+  &__button {
+    display: flex;
+
+    position: absolute;
+    z-index: 2;
+    right: 2rem;
+    top: 2rem;
+  }
+}

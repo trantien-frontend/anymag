@@ -1,0 +1,31 @@
+mixin travel(listTravel)
+    .travel 
+        .title-parten
+            h4 travel
+        .travel-container
+            .row
+                -const classTravel = ['col-lg-6','col-12','col-md-6','col-sm-6']
+                div(class=classTravel)
+                    .travel-left
+                        .travel-left__img  
+                            img( class="lazy-img" src=".lazy.jpg" data-src ="./images/feature-4.jpg" , alt="watting")
+                div(class=classTravel)
+                    .travel-right
+                        .travel-right__img
+                            img( class="lazy-img" src=".lazy.jpg" data-src ="./images/feature-1.jpg" , alt="watting")
+                        .travel-right__text
+                            a(href="#" class="text-siver underline-effect") Amazing Tips To Avoid Failure in Travaling Alone
+                            p.update-year
+                    .travel-right
+                        .travel-right__img
+                            img( class="lazy-img" src=".lazy.jpg" data-src ="./images/feature-2.jpg" , alt="watting")
+                        .travel-right__text
+                            a(href="#" class="text-siver underline-effect") Amazing Tips To Avoid Failure in Travaling Alone
+                            p.update-year
+                    .travel-right
+                        .travel-right__img
+                            img( class="lazy-img" src=".lazy.jpg" data-src ="./images/feature-3.jpg" , alt="watting")
+                        .travel-right__text
+                            a(href="#" class="text-siver underline-effect") Amazing Tips To Avoid Failure in Travaling Alone
+                            p.update-year
+    //travel end

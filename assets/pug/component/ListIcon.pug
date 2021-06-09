@@ -1,0 +1,15 @@
+-const listIcon = ['fab fa-facebook-f','fab fa-twitter','fab fa-instagram','fab fa-vimeo-v','fas fa-shopping-cart','fas fa-plus']
+    ul(class="list-icon")
+        each icon in listIcon 
+            if (icon === 'fas fa-shopping-cart')
+                li(class="list-icon__item" id="cart" data-cart="0")
+                    a(href="#")
+                        span(class= icon)
+            else if (icon === 'fas fa-plus')
+                li(class="list-icon__item" id="button-widgets" data-cart="0")
+                    a(href="#")
+                        span(class= icon)
+            else 
+                li(class="list-icon__item")
+                    a(href="#")
+                        span(class= icon) 

@@ -1,0 +1,38 @@
+.list-icon {
+  display: none;
+  @include reponsive(laptop) {
+    padding: 3rem 0;
+    @include flexbox(flex, center, flex-end);
+    &__item {
+      padding-left: 2rem;
+      a {
+        font-size: 15px;
+        color: black;
+      }
+    }
+    #cart {
+      position: relative;
+      &::after {
+        content: attr(data-cart);
+
+        position: absolute;
+        bottom: 70%;
+        left: 80%;
+
+        width: 20px;
+        height: 20px;
+        background: var(--primary-color);
+
+        border-radius: 50%;
+
+        color: white;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        font-size: 13px;
+      }
+    }
+  }
+}

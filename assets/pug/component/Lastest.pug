@@ -1,0 +1,21 @@
+mixin lastestPost (items) 
+    .lastest
+        .title-parten
+            h4 lasttest-post
+        .lastest__container     
+            .row
+                -let lastestCol = ['col-lg-6','col-md-6','col-sm-6','col-12']
+                    each item in items  
+                        div(class=lastestCol)
+                            .card   
+                                .card-img 
+                                    img( class="lazy-img" src=".lazy.jpg" data-src= item.img, alt="watting")
+                                    .block
+                                        h4.block-inner fashion
+                                .card-text
+                                    a(href="#" class="text-siver underline-effect") Where to Find the Greatest Inspiration
+                                    .card-text__dsc  
+                                        span.update-year
+                                        span.comment 2 comments
+
+
