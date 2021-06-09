@@ -1,5 +1,5 @@
 mixin pagination(page)
-    -let pages = ['index.html','Home-2.html','Home-3.html']
+    -let pages = ['index.html','home-2.html','home-3.html']
     -let countPage = 1; 
     .pagination
         if page === 'index.html'
@@ -12,7 +12,7 @@ mixin pagination(page)
                         span= countPage++
             a(href="./test-2.html" class='pagination-number')   
                 span(class="fas fa-angle-right") 
-        if page === 'Home-2.html'
+        if page === 'home-2.html'
             a(href="./index.html" class='pagination-number')   
                 span(class="fas fa-angle-left")
             each item in pages 
@@ -22,10 +22,10 @@ mixin pagination(page)
                 else
                     a(href=`./${item}` class='pagination-number')           
                         span= countPage++
-            a(href="./Home-3.html" class='pagination-number')   
+            a(href="./home-3.html" class='pagination-number')   
                 span(class="fas fa-angle-right") 
-        if page === 'Home-3.html'
-            a(href="./Home-2.html" class='pagination-number')   
+        if page === 'home-3.html'
+            a(href="./home-2.html" class='pagination-number')   
                 span(class="fas fa-angle-left") 
             each item in pages
                 if item === page 
